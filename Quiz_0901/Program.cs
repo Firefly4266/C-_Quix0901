@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Quiz_0901
 {
@@ -16,24 +13,22 @@ namespace Quiz_0901
             string num1 = Console.ReadLine();
             int userRes1 = int.Parse(num1);
 
-            Console.Write("Enter a second number: ");
+            Console.Write("Enter a second number (larger than first): ");
             string num2 = Console.ReadLine();
             int userRes2 = int.Parse(num2);
 
-            if (userRes1 % 6 == 0)
-            {
-                Console.Write(userRes1 + ": ");
-                count++;
-            }
+            int[] range = Enumerable.Range(userRes1, userRes2).ToArray();
 
-            if (userRes2 % 6 == 0)
+            for (int i = 0; i < range.Length; i++)
             {
-                Console.Write(userRes2 + ": ");
-                count++;
+                if (range[i] % 6 == 0)
+                {
+                    Console.Write(range[i] + ": ");
+                    count++;
+                }
             }
             Console.WriteLine();
             Console.WriteLine("{0} numbers were divisible by 6.", count);
-
         }
     }
 }

@@ -10,10 +10,6 @@ namespace Quiz_0901
     {
         static void Main(string[] args)
         {
-            Console.Write("please enter 10 numbers: ");
-            string input = Console.ReadLine();
-            int userRes = int.Parse(input);
-            int sum;
         }
     }
 }

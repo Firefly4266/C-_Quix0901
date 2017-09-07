@@ -20,19 +20,26 @@ namespace Quiz_0901
             int size = int.Parse(input);
             int[] tree = new int[size];
 
+            Console.WriteLine("Enter intergers to fill the array.");
+            int count = 0;
             for (int i = 0; i < tree.Length; i++)
             {
-                int count = 0;
                 if (tree.Length != count)
                 {
-                    Console.Write("Enter intergers to fill the array to the number specified: ");
+                    Console.Write("{0} to go: ", tree.Length - count);
                     input = Console.ReadLine();
                     int value = int.Parse(input);
                     tree[i] = value;
                     count++;
                 }
             }
-            Console.WriteLine(tree.Length);
+            // Below without sorting...I was getting close.
+            //tree.ToList().ForEach(i => Console.WriteLine(i.ToString()));
+            Array.Sort(tree);
+            Console.Write("Here are your integers in order: ");
+            foreach (int t in tree) Console.Write(t + "," + " ");
+            Console.WriteLine();
+
         }
     }
 }

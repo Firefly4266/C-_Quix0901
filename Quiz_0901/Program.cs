@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Linq;
 
+/* 2) Write a program that will accept two integers as input from the user.
+    It should then return every number that is evenly divisible by 6 on a
+    single line delimited by colons(:).  Finally, it should return a line
+    stating how many numbers were in fact divisible by 6.*/
+
 namespace Quiz_0901
 {
     class Program
